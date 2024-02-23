@@ -3,27 +3,24 @@ import ReactDOM from "react-dom/client";
 
 
 
-const InputComponent = () => {
-    const [inputValue, setInputValue] = useState('');
-    const [displayValue, setDisplayValue] = useState('');
 
-    const handleChange = (event) => {
-        setInputValue(event.target.value);
-    };
+const Counter = () => {
+  const [count, setCount] = useState(0);
 
-    const handleClick = () => {
-        setDisplayValue(inputValue);
-    };
+  const handleIncrement = () => {
+    setCount(prevCount => prevCount + 1);
+  };
 
-    return (
-        <div>
-            <input type="text" value={inputValue} onChange={handleChange} />
-            <button onClick={handleClick}>Save</button>
-            <p>copy: {displayValue}</p>
-        </div>
-    );
-}
+  return (
+    <div>
+      <h1>Counter: {count}</h1>
+      <button onClick={handleIncrement}>Increment</button>
+    </div>
+  );
+};
+ 
 
+ 
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<InputComponent/>);
+root.render(<Counter/>);
