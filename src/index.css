@@ -1,30 +1,7 @@
-.container {
-  width: 250px;
-  display: flex;
-  align-items: center;
-  margin-bottom: 10px;
-  flex-wrap: wrap;
-  margin: auto;
+.div p{
+  width: 100px;
+  height: 2000px;
 }
-
-input[type="text"] {
-  padding: 10px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  flex-grow: 1;  
-  margin-right: 5px;
-}
-
-button[type="button"] {
-  padding: 10px 20px;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  background-color: #ddd;
-  color: #333;
-  cursor: pointer;
-  transition: all 0.2s ease-in-out;
-}
-
-button[type="button"]:hover {
-  background-color: #ccc;
+btn{
+  width: 200px;
 }

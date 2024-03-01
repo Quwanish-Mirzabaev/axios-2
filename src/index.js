@@ -1,23 +1,29 @@
-import React, { useRef } from "react";
+import React, {useState, useRef } from "react";
 import ReactDOM from "react-dom/client";
+import "./index.css"
 
-const InputClear = () => {
-  const textRef = useRef("");
+const Counter = () => {
+    const [count, setCount]=useState(0);
+    const prevCountRef = useRef();
 
-  const handleClear = () => {
-    textRef.current.value = "";
-  };
+    const handleClick=()=>{
+        prevCountRef.current=count;
+        setCount(count+1);
+    };
 
-  return (
-    <div className="container">
-      <h1>Сброс пароля</h1>
-      <input type="text" placeholder="Введите текст" ref={textRef} />
-      <button type="button" onClick={handleClear}>
-        Сбросит
-      </button>
-    </div>
-  );
-};
+    return (
+        <div>
+            <p>Предыдущий:{prevCountRef.current}</p>
+            <p>Счетчик: {count} </p>
+            <button onClick={handleClick} className="btn"></button>
+        </div>
+    
+    
+    
+    )
+
+};    
+
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
-root.render(<InputClear />);
+root.render(<Counter />);
