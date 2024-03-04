@@ -1,7 +1,64 @@
-.div p{
-  width: 100px;
-  height: 2000px;
+body {
+  font-family: sans-serif;
+  margin: 20px;
 }
-btn{
-  width: 200px;
+.conteiner{
+  width: 300px;
+  background-color: grey  ;
+  margin: 0px auto;
+  align-content: center;
+}
+h1 {
+  font-size: 1.5em;
+  margin-top: 0;
+}
+
+input {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  width: 20%;
+  margin-bottom: 10px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+}
+
+li:hover {
+  background-color: #f7f7f7;
+}
+
+input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: #f00;
+  color: #fff;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #d00;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: #aaa;
 }
