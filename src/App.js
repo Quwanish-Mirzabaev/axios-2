@@ -1,22 +1,17 @@
-import { getValue } from '@testing-library/user-event/dist/utils';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
 
 function App() {
 
-  const putTodo =(value)
+  const [theme, setTheme] = useState(false)
 
   return (
-     <>
-     <div className='wrapper'>
-<div className='conteiner'>
-  <h1 className='title'>Notes</h1>
-  <ul className="todos">
-
-  </ul>
-  </div>    
-     </div>
-     
-     </>
+    <div class={theme ? "theme-dark" : ""}>
+      <div class="content-bg-color main-content">
+        <h1>Dark</h1>
+        <input type="checkbox" onChange={() => setTheme(!theme)} />
+      </div>
+    </div>
   );
 }
 
