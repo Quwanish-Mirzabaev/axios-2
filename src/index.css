@@ -11,53 +11,112 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-.user-login {
-  border: 1px solid #ccc;
-  padding: 20px;
-  margin-bottom: 20px;
+*{
+  box-sizing: border-box;
+  transition: all 1s ease;
 }
 
-.user-profile {
-  border: 1px solid #333;
-  background-color: #f5f5f5;
-  padding: 20px;
-}
-.login{
-  width: 340px;
+ img{
+  width: 200px;
   height: 300px;
-  border-radius: 5px;
-  margin: 0px auto;
-   box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;;
-  background-color: #a09b9b;
+ 
+
+}
+.cont{
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 20px ;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;;
+  background-color: aliceblue;
+  max-width: 2000px;
+   height: 1100px;
+
+}
+.btn{
+  width: 100px;
+  height: 30px;
+  border-radius: 5px;
+  background-color: white;
+  color: blue;
+}
+
+.btn:hover{
+  background-color: blue;
+  color: white;
+}
+.korz{
   flex-direction: column;
-justify-content: center;
-align-items: center;
-}
-div h2{
- justify-content: center;
- display: flex;
-}
-
-.inp{
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-}
-.inp2{
-  width: 200px;
-  height: 30px;
-  border-radius: 5px;
-}
-
-.profile{
-  width: 340px;
-  height: 300px;
-  border-radius: 5px;
-  margin: 0px auto;
- box-shadow: rgb(38, 57, 77) 0px 20px 30px -10px;
- display: flex;
- background-color: #a09b9b;
- flex-direction: column;
+  background-color: rgb(254, 255, 255);
+  right: 0px;
+  top: 0px;
+ 
+  width: 400px;
+  box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+border-radius: 5px;
+display: flex ;
  
 }
+ .tot{
+  font-weight: 700px ;
+  font-size: 30px;
+ }
+ .korzina{
+  display: flex;
+  align-items: center;
+justify-content: space-evenly;
+}
+ .korzina img{
+  width: 50px;
+  height: 70px;
+  margin: 10px;
+  
+ }
+ .cal{
+  display: flex;
+  gap: 10px ;
+  justify-content: center;
+  justify-content: space-between;
+ }
+ .num{
+  font-weight: bold;
+  font-size: 30px;
+   
+ }
+ .r-btn{
+  font-weight: bold;
+  color: red;
+  border-radius: 5px;
+  background-color: white;
+ box-shadow: rgba(0, 0, 0, 0.25) 0px 25px 50px -12px;
+ }
+ .btn-plus{
+  background-color: white;
+  color: blue;
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 5px;
+ }
+ .btn-minus{
+  background-color: white;
+  color: blue;
+  
+  font-weight: bold;
+  font-size: 40px;
+  border-radius: 5px;
+ }
+.r-btn:hover{
+  background-color: red;
+  color: white;
+}
+
+ .btn-plus:hover{
+  
+  background-color: blue;
+  color: white;
+ }
+ .btn-minus:hover{
+  background-color: blue;
+  color: white;
+ }
