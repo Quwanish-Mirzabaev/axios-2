@@ -1,12 +1,25 @@
-// import React, { useState } from "react";
-import "./App.css";
+import { Outlet, Link } from "react-router-dom";
 
-const App = ({ name }) => {
+const Layout = () => {
   return (
-    <div>
-      <h1>Привет, {name}!</h1>
-    </div>
-  );
+    <>
+      <nav>
+        <ul>
+          <li>
+            <Link to="/">Home</Link>
+          </li>
+          <li>
+            <Link to="/">Blogs</Link>
+          </li>
+          <li>
+            <Link to="/contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+
+      <Outlet />
+    </>
+  )
 };
 
-export default App;
+export default Layout;
