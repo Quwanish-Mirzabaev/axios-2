@@ -1,40 +1,53 @@
 import { useState, useEffect } from "react";
 import axios from "axios";
 import "./Footer.css";
-const src = "https://fakestoreapi.com/products/";
+// const src = "https://fakestoreapi.com/products/";
 
 function Footer() {
-  const [articles, setArticles] = useState([]);
+  const [posts, setPosts] = useState([]);
+  const [error, setError] = useState(null);
+
 
   useEffect(() => {
-    axios.get(src).then((data) => {
-      setArticles(data.data);
-    });
+    async function fetchPosts() {
+      try {
+        const response = await axios.get('https://jsonplaceholder.typicode.com/posts');
+        setPosts(response.data);
+      } catch (error) {
+        setError(error.message);
+      }
+    }
+
+    fetchPosts();
+
   }, []);
 
   return (
-    <>
-      <div className="products">
-        {articles.map((article) => {
-          return (
-            <div className="card">
-              <div>
-                <img className="product-img" src={article.image} alt="" />
-              </div>
-              <div className="product-title">
-                <h1>{article.title}</h1>
-              </div>
-              <div className="product-category">{article.category}</div>
-              <div className="product.price">${article.price}</div>
-              <div>
-                <button className="add-btn" >Add Cart</button>
-              </div>
-            </div>
-          );
-        })}
-      </div>
-    </>
+    <div>
+      <h1>Post Titles</h1>
+      {error && <p>Error: {error}</p>}
+      <ul>
+        {posts.map((post, index) => (
+          <li key={index}>  
+            <p>{post.id}</p>
+            <h3>{post.title}</h3>
+            <p>{post.body}</p>
+          </li>
+        ))}
+      </ul>
+       <div>
+        </div>
+    </div>
   );
 }
 
 export default Footer;
+
+
+
+
+
+
+
+
+
